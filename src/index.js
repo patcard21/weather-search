@@ -1,26 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import { createRoot } from "react-dom/client";
+import WeatherSearch from "./WeatherSearch";
 
-
-import Search from "./search";
+import "./sky.jpg";
 
 import "./styles.css";
 
-function SearchEngine() {
-  return (
-    <div className="SearchEngine">
-      <div>
-        <h1>Weather Search Engine</h1>
-        <Search />
-      </div>
-    </div>
-  );
+function App() {
+	return (
+		<div className="App" style={{ backgroundImage: "./sky.jpg" }}>
+			<h1> Weather App</h1>
+			<WeatherSearch />
+		</div>
+	);
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<SearchEngine />);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App tab="home" />);
