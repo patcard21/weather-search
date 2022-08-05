@@ -21,6 +21,7 @@ export default function Search() {
       </form>
       <h2> {message}</h2>
     </div>
+	
   );
 }
 
